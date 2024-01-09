@@ -1,13 +1,28 @@
-import React from "react";
+import React, { useState } from "react";
 
-//include images into your bundle
+const Turnos = {
+  X: "x",
+  O: "o",
+};
+const board = Array(9).fill(null);
 
-//create your first component
 const Home = () => {
+  const [state, setState] = useState([
+    " ",
+    " ",
+    " ",
+    " ",
+    " ",
+    " ",
+    " ",
+    " ",
+    " ",
+  ]);
   return (
     <div className=" container">
       <div className="text-center">
         <h1>TIC TAC TOE!</h1>
+        <ChooseAPlayer />
         <h2>choose a player</h2>
         <form>
           <input type="text" />
@@ -18,6 +33,16 @@ const Home = () => {
           <button>x</button>
           <button>o</button>
         </form>
+        <section className="game">
+          {board.map((_, index) => {
+            return (
+              <div className="cell" key={index}>
+                <span className="cell_content"></span>
+                <div />
+              </div>
+            );
+          })}
+        </section>
       </div>
     </div>
   );

@@ -7,7 +7,7 @@ import "../styles/index.css";
 
 //import your own components
 
-import App from "./component/App.js";
+import App from "./component/App";
 
 //render your react application
-ReactDOM.render(<Home />, document.querySelector("#app"));
+ReactDOM.render(<App />, document.querySelector("#app"));

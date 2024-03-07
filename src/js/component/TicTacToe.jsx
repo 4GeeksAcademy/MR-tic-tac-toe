@@ -1,8 +1,8 @@
 import React from "react";
-import Tablero from "./Tablero";
 import Menu from "./Menu";
-import "./App.css";
-const Juego = () => {
+import Board from "./Board";
+
+const TicTacToe = () => {
   return (
     <>
       <div className="container d-flex"></div>
@@ -12,9 +12,11 @@ const Juego = () => {
       <div className="col-12 Textalign mt-5">
         <Menu />
       </div>
-      <div className="col-12 Textalign mt-5">{/* <Tablero /> */}</div>
+      <div className="col-12 Textalign mt-5">
+        <Board />
+      </div>
     </>
   );
 };
 
-export default Juego;
+export default TicTacToe;

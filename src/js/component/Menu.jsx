@@ -3,9 +3,18 @@ import React, { useState } from "react";
 const Menu = ({ onWeaponPick }) => {
   const [player1Name, setPlayer1Name] = useState("");
   const [player2Name, setPlayer2Name] = useState("");
+  const [error, setError] = useState("");
 
   const handleStartGame = (weapon) => {
-    onWeaponPick(player1Name, player2Name, weapon);
+    if (player1Name.trim() === "" || player2Name.trim() === "") {
+      setError("Please fill in both player names.");
+      return;
+    }
+
+    const player1Weapon = weapon;
+    const player2Weapon = weapon === "X" ? "O" : "X";
+
+    onWeaponPick(player1Name, player2Name, player1Weapon, player2Weapon);
   };
 
   return (
@@ -33,6 +42,8 @@ const Menu = ({ onWeaponPick }) => {
               onChange={(e) => setPlayer2Name(e.target.value)}
             />
           </div>
+
+          {error && <p className="text-danger">{error}</p>}
 
           <button
             className="buttonX col-6 mx-3 mt-3 mb-5"

@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import Board from "./Board";
-
 import Menu from "./Menu";
 import Data from "./Data";
 

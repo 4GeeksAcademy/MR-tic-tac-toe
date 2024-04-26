@@ -11,10 +11,7 @@ const Menu = ({ onWeaponPick }) => {
       return;
     }
 
-    const player1Weapon = weapon;
-    const player2Weapon = weapon === "X" ? "O" : "X";
-
-    onWeaponPick(player1Name, player2Name, player1Weapon, player2Weapon);
+    onWeaponPick(weapon);
   };
 
   return (
@@ -26,7 +23,7 @@ const Menu = ({ onWeaponPick }) => {
 
       <div className="menu">
         <div className="container-inputs d-flex row justify-content-center text-center">
-          <h2 className="col-12 text-white mt-5 mb-3">CHOOSE YOUR WEAPON</h2>
+          {/* <h2 className="col-12 text-white mt-5 mb-3">CHOOSE YOUR WEAPON</h2> */}
           <div className="players">
             <input
               type="text"
@@ -46,14 +43,14 @@ const Menu = ({ onWeaponPick }) => {
           {error && <p className="text-danger">{error}</p>}
 
           <button
-            className="buttonX col-6 mx-3 mt-3 mb-5"
+            className="buttonx col-1 justify-content-center mx-3 mt-3 mb-5"
             onClick={() => handleStartGame("X")}
           >
             X
           </button>
 
           <button
-            className="buttonO col-6 mx-3 mt-3 mb-5"
+            className="buttono col-1 justify-content-center mx-3 mt-3 mb-5"
             onClick={() => handleStartGame("O")}
           >
             O

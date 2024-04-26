@@ -19,11 +19,28 @@ body {
   background-color: rgb(65, 42, 36);
   color: aqua;
 }
-.ButtonX {
+.buttonx {
   font-weight: 900;
   font-size: 14px;
   color: #3bd6d4;
-  background-color: #6b151f;
+  background-color: rgb(65, 42, 36);
+  padding: 30px 30px;
+  border: none;
+  box-shadow: rgb(0, 0, 0) 0px 0px 0px 0px;
+  border-radius: 0px 1px 1px;
+  transition: 151ms;
+  transform: translateY(0);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+.buttono {
+  font-weight: 900;
+  font-size: 14px;
+  color: #d2e666;
+  background-color: rgb(65, 42, 36);
   padding: 30px 30px;
   border: none;
   box-shadow: rgb(0, 0, 0) 0px 0px 0px 0px;
